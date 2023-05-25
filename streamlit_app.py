@@ -15,6 +15,5 @@ my_fruits_show=my_fruits_list.loc[my_fruits_selection]
 streamlit.dataframe(my_fruits_show)
 streamlit.header("FruityVice's Fruit Advice!")
 request=requests.get('https://fruityvice.com/api/fruit/watermelon')
-streamlit.text(request.json())
 json_parsed=pandas.json_normalize(request.json())
 streamlit.dataframe(json_parsed)
